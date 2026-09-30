@@ -23,6 +23,7 @@ import json
 import logging
 import math
 import os
+import tempfile
 
 # Import built-in modules
 import threading
@@ -811,6 +812,8 @@ class SignalProcessor(threading.Thread):
                             self.snrs[0],
                         )
 
+                        self.wr_hardsignal_json()
+
                         if self.DOA_data_format == "Kraken Pro Local" or self.DOA_data_format == "Kraken Pro Remote" :
                             # for multi VFOs: send each VFO as a single Message
 
@@ -1157,6 +1160,56 @@ class SignalProcessor(threading.Thread):
         self.DOA_res_fd.write(html_str)
         self.DOA_res_fd.truncate()
         self.logger.debug("DoA results writen: {:s}".format(html_str))
+
+    def wr_hardsignal_json(self):
+        """Publish result index 0 (not necessarily configured VFO 0).
+
+        Bearing follows CSV/app output: 360 - theta_0, without modulo.
+        Spectrum retains internal bin order and the existing log offset.
+        This optional live snapshot is not calibrated or evidentiary storage.
+        """
+        temporary_path = None
+        try:
+            count = len(self.theta_0_list)
+            result_lists = (
+                self.freq_list, self.confidence_list, self.max_power_level_list,
+                self.doa_result_log_list, self.number_of_correlated_sources,
+                self.snrs,
+            )
+            if not count or any(len(values) != count for values in result_lists):
+                raise ValueError("Hardsignal result lists are empty or misaligned")
+            spectrum = self.doa_result_log_list[0]
+            offset = abs(float(np.min(spectrum)))
+            data = {
+                "tStamp": int(self.timestamp),
+                "freq": int(self.freq_list[0]),
+                "resultIndex": 0,
+                "bearingConvention": "csv_app_360_minus_theta_0_deg",
+                "radioBearing": 360.0 - float(self.theta_0_list[0]),
+                "conf": float(self.confidence_list[0]),
+                "power": float(self.max_power_level_list[0]),
+                "snr_db": float(self.snrs[0]),
+                "num_corr_sources": int(self.number_of_correlated_sources[0]),
+                "doaArray": [float(value) + offset for value in spectrum],
+            }
+            # Same-directory replacement is atomic; retain owner-only mode 0600.
+            with tempfile.NamedTemporaryFile(
+                mode="w", encoding="utf-8", dir=shared_path,
+                prefix=".hardsignal_live.", suffix=".tmp", delete=False,
+            ) as output:
+                temporary_path = output.name
+                json.dump(data, output, allow_nan=False)
+            os.replace(temporary_path, os.path.join(shared_path, "hardsignal_live.json"))
+            temporary_path = None
+        except Exception:
+            # Optional export must not abort processing on data or I/O errors.
+            self.logger.warning("Hardsignal JSON export failed", exc_info=True)
+        finally:
+            if temporary_path is not None:
+                try:
+                    os.unlink(temporary_path)
+                except OSError:
+                    self.logger.warning("Hardsignal temporary-file cleanup failed", exc_info=True)
 
     def wr_json(
         self,
