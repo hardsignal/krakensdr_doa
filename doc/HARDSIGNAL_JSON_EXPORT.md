@@ -78,3 +78,21 @@ method/import/call restores the base commit's AST (`86528c0`). The baseline is
 pinned so committing this candidate does not invalidate the check. This is not a
 hardware integration test; deliberate future processor changes require review
 of the pinned preservation check.
+
+## Hardware integration validation — 2026-10-01
+
+Validated on KrakenSDR hardware using an owned Autel MX-Sensor.
+
+Observed:
+- Kraken DAQ healthy after startup transient cleared.
+- Frequency: 433868160 Hz.
+- Hardsignal JSON snapshot created during a qualifying DoA burst.
+- Output file mode: 0600.
+- Local HTTP data server returned HTTP 200 for `hardsignal_live.json`.
+- Served JSON contained the expected numeric fields, resultIndex=0, and
+  bearingConvention=`csv_app_360_minus_theta_0_deg`.
+- No `Hardsignal JSON export failed` warnings were observed.
+
+This validates local publication and serving behavior for the tested setup.
+It does not establish calibrated bearing accuracy, transmitter identity,
+or operation under every multi-VFO/runtime configuration.
