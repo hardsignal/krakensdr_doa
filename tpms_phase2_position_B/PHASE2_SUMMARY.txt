@@ -1,0 +1,64 @@
+Hardsignal Labs — Controlled TPMS Geometry Experiment
+Phase 2: Position A vs Position B
+
+Date: 2026-09-30
+
+Source:
+- Same owned Autel MX-Sensor
+- 433868160 Hz
+
+Receiver configuration held constant:
+- KrakenSDR 5-channel
+- MUSIC DoA
+- UCA
+- antenna spacing 0.21 m
+- uniform gain 15.7
+- manual squelch -45 dB
+
+Controlled change:
+- MX-Sensor moved approximately 1.0 m laterally from Position A to Position B.
+- Intended sensor height and orientation were otherwise held approximately constant.
+- Kraken array and RF settings were unchanged.
+
+POSITION A — Phase 1
+Five activation attempts:
+- Trial 001: mean 279.8 deg
+- Trial 002: null capture
+- Trial 003: mean 277.5 deg
+- Trial 004: mean 287.25 deg
+- Trial 005: mean 291.75 deg
+
+Successful capture rate: 4/5
+Observed successful-row range: 277-293 deg
+
+POSITION B — Phase 2
+B001:
+- supplementary two-activation capture
+- 10 final rows
+- combined mean 251.4 deg
+- range 247-255 deg
+
+B002:
+- independent single activation
+- 5 final rows
+- mean 248.8 deg
+- range 248-249 deg
+- population std 0.4 deg
+
+B003:
+- independent single activation
+- 5 final rows
+- mean 249.2 deg
+- range 249-250 deg
+- population std 0.4 deg
+
+Descriptive result:
+The two clean independent Position-B activations reproduced closely, with
+trial means differing by 0.4 deg. Their observed rows occupied 248-250 deg,
+while successful Position-A observations occupied 277-293 deg.
+
+Scientific boundary:
+These measurements demonstrate a reproducible descriptive difference between
+the recorded RF/DoA observations under the tested Position-A and Position-B
+conditions. They do not establish calibration-grade absolute direction,
+transmitter identity, or a causal physical mechanism for the observed shift.

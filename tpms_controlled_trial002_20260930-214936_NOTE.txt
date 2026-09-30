@@ -1,0 +1,22 @@
+Hardsignal Labs — Controlled TPMS Observation
+Trial: 002
+Date: 2026-09-30
+Frequency: 433868160 Hz
+Kraken mode: MUSIC
+Array: UCA
+Antenna spacing: 0.21 m
+Squelch: Manual -45 dB
+Recording interval: 1 s
+Source: same owned Autel MX-Sensor as Trial 001
+Condition: same intended sensor position/orientation as Trial 001
+
+Capture file: tpms_controlled_trial002_20260930-214936.csv
+Rows captured: 0
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+Observation:
+No qualifying Kraken DoA rows were written during this activation window.
+
+No cause is assigned to the null result. It does not establish whether the
+sensor failed to transmit, the transmission was missed, or the DoA/VFO gate
+conditions were not met.

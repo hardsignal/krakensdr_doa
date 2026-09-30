@@ -1,0 +1,21 @@
+Hardsignal Labs — Controlled TPMS Observation
+Trial: 005
+Date: 2026-09-30
+Frequency: 433868160 Hz
+Kraken mode: MUSIC
+Array: UCA
+Antenna spacing: 0.21 m
+Squelch: Manual -45 dB
+Recording interval: 1 s
+Source: same owned Autel MX-Sensor as previous trials
+Condition: same intended sensor position/orientation
+
+Capture file: tpms_controlled_trial005_20260930-220007.csv
+Rows captured: 4
+SHA256: b6a6caaa35382d8ced936c87a8f1c669da8c1761f230d2edafbacecd7317fd7c
+
+Observation:
+Positive controlled RF/DoA capture.
+
+This is controlled RF/DoA observation only and is not a calibration-grade
+absolute-direction, transmitter-identity, or causal propagation claim.

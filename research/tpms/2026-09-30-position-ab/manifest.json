@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "experiment_date": "2026-09-30",
+  "source_path_base": "manifest directory",
+  "frequency_hz": 433868160,
+  "kraken_configuration": {
+    "channels": 5,
+    "algorithm": "MUSIC",
+    "array": "UCA",
+    "antenna_spacing_m": 0.21,
+    "uniform_gain": 15.7,
+    "squelch_mode": "manual",
+    "squelch_db": -45,
+    "phase1_recording_interval_s": 1
+  },
+  "controlled_change": "Approximately 1.0 m lateral displacement from A to B; same owned Autel MX-Sensor, same intended orientation/height, unchanged Kraken array and RF settings. Operator-reported conditions, not independently measured by CSV.",
+  "primary_position_b_trials": [
+    "B002",
+    "B003"
+  ],
+  "supplementary_position_b_trials": [
+    "B001"
+  ],
+  "sources": [
+    {
+      "path": "../../../tpms_controlled_20260930-214440.csv",
+      "kind": "raw_capture",
+      "sha256": "d316fbbeb6a0a88c4763cf2b80c30a819a9b12f79bc9ef32b9164cafa71c7357",
+      "trial": "A001",
+      "position": "A",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": false,
+      "hash_provenance": "verified against existing acquisition note",
+      "recorded_sha256": "d316fbbeb6a0a88c4763cf2b80c30a819a9b12f79bc9ef32b9164cafa71c7357",
+      "recorded_hash_note": "../../../tpms_controlled_20260930-214440_NOTE.txt"
+    },
+    {
+      "path": "../../../tpms_controlled_20260930-214440_NOTE.txt",
+      "kind": "acquisition_note",
+      "sha256": "3c9d4fa9051fedd0e0a36fe9195e64b50917cd3f2db8ef2e90c10debeb5e423c"
+    },
+    {
+      "path": "../../../tpms_controlled_20260930_SUMMARY.txt",
+      "kind": "existing_derived_summary",
+      "sha256": "884e8f3d884dd3d0574186e74b0fa160d6a17ffae5d1314ed3d99a402cd51aa0"
+    },
+    {
+      "path": "../../../tpms_controlled_trial002_20260930-214936.csv",
+      "kind": "raw_capture",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "trial": "A002",
+      "position": "A",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": true,
+      "hash_provenance": "verified against existing acquisition note",
+      "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorded_hash_note": "../../../tpms_controlled_trial002_20260930-214936_NOTE.txt"
+    },
+    {
+      "path": "../../../tpms_controlled_trial002_20260930-214936_NOTE.txt",
+      "kind": "acquisition_note",
+      "sha256": "daf3f0c8cd0774ef536141bb436fdb67996cd6c0aeef71da1ab961fd56445a95"
+    },
+    {
+      "path": "../../../tpms_controlled_trial003_20260930-215116.csv",
+      "kind": "raw_capture",
+      "sha256": "c14f6914a42361a2c5613fc2ca6ff12db55df40629e9efbe87f99aa4c4c1db2b",
+      "trial": "A003",
+      "position": "A",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": false,
+      "hash_provenance": "verified against existing acquisition note",
+      "recorded_sha256": "c14f6914a42361a2c5613fc2ca6ff12db55df40629e9efbe87f99aa4c4c1db2b",
+      "recorded_hash_note": "../../../tpms_controlled_trial003_20260930-215116_NOTE.txt"
+    },
+    {
+      "path": "../../../tpms_controlled_trial003_20260930-215116_NOTE.txt",
+      "kind": "acquisition_note",
+      "sha256": "20babf525382434fcbf7cb22adbba56c6002f3f4de220cd692f29c073021f056"
+    },
+    {
+      "path": "../../../tpms_controlled_trial004_20260930-215823.csv",
+      "kind": "raw_capture",
+      "sha256": "03a5e2d8cb9ec2ed8c1d328942a5b98255c2ed293671b85bd7725a06c757d0cf",
+      "trial": "A004",
+      "position": "A",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": false,
+      "hash_provenance": "verified against existing acquisition note",
+      "recorded_sha256": "03a5e2d8cb9ec2ed8c1d328942a5b98255c2ed293671b85bd7725a06c757d0cf",
+      "recorded_hash_note": "../../../tpms_controlled_trial004_20260930-215823_NOTE.txt"
+    },
+    {
+      "path": "../../../tpms_controlled_trial004_20260930-215823_NOTE.txt",
+      "kind": "acquisition_note",
+      "sha256": "1fc3c46cac049756fbe26c9741103ca92e304386ee29d8a8bec9d2a9a4ba1829"
+    },
+    {
+      "path": "../../../tpms_controlled_trial005_20260930-220007.csv",
+      "kind": "raw_capture",
+      "sha256": "b6a6caaa35382d8ced936c87a8f1c669da8c1761f230d2edafbacecd7317fd7c",
+      "trial": "A005",
+      "position": "A",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": false,
+      "hash_provenance": "verified against existing acquisition note",
+      "recorded_sha256": "b6a6caaa35382d8ced936c87a8f1c669da8c1761f230d2edafbacecd7317fd7c",
+      "recorded_hash_note": "../../../tpms_controlled_trial005_20260930-220007_NOTE.txt"
+    },
+    {
+      "path": "../../../tpms_controlled_trial005_20260930-220007_NOTE.txt",
+      "kind": "acquisition_note",
+      "sha256": "8522f995456022169ef43ad64f705c05e49c57e46bca320b441a8856dee20ff0"
+    },
+    {
+      "path": "../../../tpms_phase2_position_B/PHASE2_SUMMARY.txt",
+      "kind": "existing_derived_summary",
+      "sha256": "3002e556f3ff765887fc2425f3145d4373865cd303fa2509cdcf0a885574f403",
+      "hash_provenance": "Earlier terminal-recorded reference supplied by the operator and matched during packaging."
+    },
+    {
+      "path": "../../../tpms_phase2_position_B/tpms_positionB_B001_20260930-232310.csv",
+      "kind": "raw_capture",
+      "sha256": "085156e0d38163702086d41ad5f8ffa6ff00783ae9c636b311ccfebd3925cea5",
+      "trial": "B001",
+      "position": "B",
+      "activations": 2,
+      "role": "supplementary_two_activations",
+      "allow_null": false,
+      "hash_provenance": "Earlier terminal-recorded reference supplied by the operator and matched during packaging."
+    },
+    {
+      "path": "../../../tpms_phase2_position_B/tpms_positionB_B002_20260930-232558.csv",
+      "kind": "raw_capture",
+      "sha256": "2c1c9d67f4a3e221935c6a94d7197169d605b3b0c1b17479c16b0f60c9993226",
+      "trial": "B002",
+      "position": "B",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": false,
+      "hash_provenance": "Earlier terminal-recorded reference supplied by the operator and matched during packaging."
+    },
+    {
+      "path": "../../../tpms_phase2_position_B/tpms_positionB_B003_20260930-232719.csv",
+      "kind": "raw_capture",
+      "sha256": "1237cdd3efa543c8f5a2a32cfc6c19649720c35c9c06b9e3c1ca2e69032b58f2",
+      "trial": "B003",
+      "position": "B",
+      "activations": 1,
+      "role": "primary",
+      "allow_null": false,
+      "hash_provenance": "Earlier terminal-recorded reference supplied by the operator and matched during packaging."
+    }
+  ],
+  "derived_artifacts": [
+    "README.md",
+    "statistics.json"
+  ],
+  "interpretation": "The tested Position-A and Position-B conditions produced reproducibly different RF/DoA observations in this dataset.",
+  "acquisition_run_limitation": "Operator reports workstation reboot and Kraken stack restart between Position A and Position B. Reported RF settings were checked after restart and matched the intended baseline. Position and acquisition run changed together; this descriptive A/B comparison does not isolate the effect of the approximately 1 m displacement.",
+  "trial_interpretation": "Four of five Position-A attempted recordings contained DoA rows. Observation windows and manual stopping times were not identical; this is not a packet-detection probability or calibrated sensitivity. Multiple CSV rows from one activation are not independent experiments. B002/B003 are separate single-activation trials, not proof of statistical independence; B001 remains supplementary with two activations and A002 remains null.",
+  "source_dependencies": "Original source directories are required in the listed relative layout; no byte-identical source copies are included. All 15 sources are listed for eventual backup and version control and are currently untracked."
+}

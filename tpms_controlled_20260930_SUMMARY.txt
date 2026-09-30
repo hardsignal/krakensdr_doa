@@ -1,0 +1,51 @@
+Hardsignal Labs — Controlled TPMS DoA Observation Summary
+
+Date:
+2026-09-30
+
+Hardware:
+- KrakenSDR 5-channel
+- MUSIC DoA
+- UCA array
+- Antenna spacing: 0.21 m
+
+Source:
+- Owned Autel MX-Sensor
+- Frequency: 433868160 Hz
+
+Trials:
+
+Trial 001:
+- 5 rows
+- mean bearing: 279.8 deg
+
+Trial 002:
+- 0 rows
+- null capture preserved
+
+Trial 003:
+- 4 rows
+- mean bearing: 277.5 deg
+
+Trial 004:
+- 4 rows
+- mean bearing: 287.25 deg
+
+Trial 005:
+- 4 rows
+- mean bearing: 291.75 deg
+
+Summary:
+- Successful captures: 4/5
+- Total DoA rows: 17
+- Observed bearing range: 277-293 deg
+
+Interpretation:
+Repeated controlled RF/DoA observations were successfully captured.
+The experiment demonstrates measurement repeatability workflow,
+not calibration-grade absolute direction or transmitter identity.
+
+Future work:
+- repeat with controlled geometry changes
+- rotate receiver/sensor deliberately
+- compare controlled variations
